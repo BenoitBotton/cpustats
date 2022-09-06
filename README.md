@@ -1,4 +1,8 @@
 # README
+in my effort to learn [Wails v2](https://wails.io) with react, I am building a CPU usage reporting app. 
+this is inspired by https://github.com/plutov/packagemain/tree/master/16-wails-desktop-app
+
+
 
 ## About
 
