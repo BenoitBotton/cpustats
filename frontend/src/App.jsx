@@ -5,6 +5,7 @@ import './App.css';
 function App() {
     let resultText = 0;
 
+    // if I comment this out, the app does work. uncommented, I get a blank app, no error
     window.runtime.Eventson("cpu_usage", cpu_usage => {
         resultText = cpu_usage.avg;
     })
