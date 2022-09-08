@@ -1,42 +1,44 @@
 import React from "react"
-import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts'
+import { PieChart, Pie, Cell } from 'recharts'
 
 class PieRechartComponent extends React.Component {
 
-  COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF']
+  COLORS = ['#0088FE', '#999']
 
-  pieData = [
-    {
-      "name": "Chrome",
-      "value": 68.85
-    },
-    {
-      "name": "Firefox",
-      "value": 7.91
-    },
-    {
-      "name": "Edge",
-      "value": 6.85
-    },
-    {
-      "name": "Internet Explorer",
-      "value": 6.14
-    },
-    {
-      "name": "Others",
-      "value": 10.25
-    }
+
+  data = [
+    { name: "L2", value: 25 },
+    { name: "L1", value: 75 }
   ]
 
   render() {
     return (
-      <PieChart width={730} height={300}>
-        <Pie data={this.pieData} color="#000000" dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={120} fill="#8884d8" >
+      <PieChart width={400} height={400}>
+        <text
+          x={25}
+          y={25}
+          textAnchor="middle"
+          dominantBaseline="middle"
+        >
+          25
+        </text>
+        <Pie
+          data={this.data}
+          dataKey="value"
+          innerRadius="80%"
+          outerRadius="100%"
+          fill="#82ca9d"
+          startAngle={-80}
+          endAngle={260}
+          paddingAngle={0}
+          blendStroke
+        >
           {
-            this.pieData.map((entry, index) => <Cell key={`cell-${index}`} fill={this.COLORS[index % this.COLORS.length]} />)
+            this.data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={this.COLORS[index]} />
+            ))
           }
         </Pie>
-        <Legend />
       </PieChart>
     )
   }
