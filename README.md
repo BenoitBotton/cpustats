@@ -1,12 +1,11 @@
 # README
-in my effort to learn [Wails v2](https://wails.io) with react, I am building a CPU usage reporting app. 
-this is inspired by https://github.com/plutov/packagemain/tree/master/16-wails-desktop-app
-
-
 
 ## About
 
-This is the official Wails React template.
+In my effort to learn [Wails v2](https://wails.io) with react and Typescript, I am building a CPU usage reporting app. 
+This is inspired by https://github.com/plutov/packagemain/tree/master/16-wails-desktop-app
+
+I created two gauges in order to compare [Recharts](https://recharts.org/en-US) and [Victory](https://formidable.com/open-source/victory/)
 
 ## Live Development
 
