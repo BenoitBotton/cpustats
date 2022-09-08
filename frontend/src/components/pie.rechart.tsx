@@ -8,7 +8,7 @@ type pieData = {
 
 const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
 
-  const COLORS = ['#0088FE', 'transparent']
+  const COLORS = ['#F26D22', 'transparent']
 
   return (
     <>
@@ -20,7 +20,7 @@ const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
             y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            fill='#999'
+            style={{ fontSize: 30, fill: '#999', fontFamily: 'candara' }}
           >
             {pieData[0].value}
           </text>

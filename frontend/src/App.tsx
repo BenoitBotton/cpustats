@@ -2,6 +2,7 @@ import './App.css'
 import { SetStateAction, useEffect, useState } from 'react'
 import React from 'react'
 import PieRechartComponent from './components/pie.rechart'
+import PieVictoryComponent from './components/pie.victory'
 
 function App() {
     const [usage, setUsage] = useState(0)
@@ -22,6 +23,7 @@ function App() {
     return (
         <div id="App">
             <PieRechartComponent pieData={pieData} />
+            <PieVictoryComponent pieData={pieData} />
         </div>
     )
 }
