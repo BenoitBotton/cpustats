@@ -1,10 +1,7 @@
 import './App.css'
 import { SetStateAction, useEffect, useState } from 'react'
 import React from 'react'
-import { PieChart, Pie, ResponsiveContainer } from 'recharts'
 import PieRechartComponent from './components/pie.rechart'
-
-const percent = 25
 
 function App() {
     const [usage, setUsage] = useState(0)

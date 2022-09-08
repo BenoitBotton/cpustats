@@ -12,16 +12,17 @@ const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
 
   return (
     <>
-      <h2>CPU Usage</h2>
+      <h2>CPU Usage - Recharts</h2>
       <ResponsiveContainer width={"100%"} height={300} min-width={300}>
         <PieChart width={400} height={400}>
           <text
-            x={25}
-            y={25}
+            x="50%"
+            y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
+            fill={COLORS[1]}
           >
-            25
+            {pieData[0].value}
           </text>
           <Pie
             data={pieData}
@@ -47,4 +48,4 @@ const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
 
 }
 
-export default PieRechartComponent
+export default PieRechartComponent 
