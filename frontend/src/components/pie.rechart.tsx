@@ -1,47 +1,50 @@
 import React from "react"
-import { PieChart, Pie, Cell } from 'recharts'
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
-class PieRechartComponent extends React.Component {
+type pieData = {
+  name: string
+  value: number
+}[]
 
-  COLORS = ['#0088FE', '#999']
+const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
 
+  const COLORS = ['#0088FE', '#999']
 
-  data = [
-    { name: "L2", value: 25 },
-    { name: "L1", value: 75 }
-  ]
+  return (
+    <>
+      <h2>CPU Usage</h2>
+      <ResponsiveContainer width={"100%"} height={300} min-width={300}>
+        <PieChart width={400} height={400}>
+          <text
+            x={25}
+            y={25}
+            textAnchor="middle"
+            dominantBaseline="middle"
+          >
+            25
+          </text>
+          <Pie
+            data={pieData}
+            dataKey="value"
+            innerRadius="80%"
+            outerRadius="100%"
+            fill="#82ca9d"
+            startAngle={-60}
+            endAngle={240}
+            paddingAngle={0}
+            blendStroke
+          >
+            {
+              pieData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index]} />
+              ))
+            }
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
+    </>
+  )
 
-  render() {
-    return (
-      <PieChart width={400} height={400}>
-        <text
-          x={25}
-          y={25}
-          textAnchor="middle"
-          dominantBaseline="middle"
-        >
-          25
-        </text>
-        <Pie
-          data={this.data}
-          dataKey="value"
-          innerRadius="80%"
-          outerRadius="100%"
-          fill="#82ca9d"
-          startAngle={-80}
-          endAngle={260}
-          paddingAngle={0}
-          blendStroke
-        >
-          {
-            this.data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={this.COLORS[index]} />
-            ))
-          }
-        </Pie>
-      </PieChart>
-    )
-  }
 }
 
 export default PieRechartComponent

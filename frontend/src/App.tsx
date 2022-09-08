@@ -17,10 +17,14 @@ function App() {
             []
     })
 
+    const pieData = [
+        { name: "L2", value: usage },
+        { name: "L1", value: 100 - usage }
+    ]
+
     return (
         <div id="App">
-            <div>CPU Usage: {usage}</div>
-            <PieRechartComponent/>
+            <PieRechartComponent pieData={pieData} />
         </div>
     )
 }
