@@ -6,7 +6,7 @@ type pieData = {
   value: number
 }[]
 
-const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
+function PieRechartComponent ({ pieData }: { pieData: pieData }) {
 
   const COLORS = ['#F26D22', 'transparent']
 
@@ -34,7 +34,7 @@ const PieRechartComponent = ({ pieData }: { pieData: pieData }) => {
             endAngle={240}
             paddingAngle={0}
             blendStroke
-            cornerRadius={20}
+            cornerRadius={10}
           >
             {
               pieData.map((entry, index) => (
