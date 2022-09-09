@@ -1,19 +1,16 @@
 import './App.css'
-import { SetStateAction, useEffect, useState } from 'react'
+import { useState } from 'react'
 import React from 'react'
 import PieRechartComponent from './components/pie.rechart'
 import PieVictoryComponent from './components/pie.victory'
 
 function App() {
     const [usage, setUsage] = useState(0)
-
-    useEffect(() => {
+   
         // @ts-ignore
-        window.runtime.EventsOn("cpu_usage", (cpu_usage: { avg: SetStateAction<number> }) => {
+        window.runtime.EventsOn("cpu_usage", (cpu_usage: { avg:number }) => {
             setUsage(cpu_usage.avg)
-        }),
-            []
-    })
+        })
 
     const pieData = [
         { name: "L2", value: usage },
