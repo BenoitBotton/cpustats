@@ -2,7 +2,7 @@ module github.com/BenoitBotton/cpustats
 
 go 1.17
 
-require github.com/wailsapp/wails/v2 v2.0.0-beta.42
+require github.com/wailsapp/wails/v2 v2.0.0-beta.44.2
 
 require (
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
@@ -36,4 +36,4 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 )
 
-replace github.com/wailsapp/wails/v2 v2.0.0-beta.42 => C:\Users\Benoit\go\pkg\mod\github.com\wailsapp\wails\v2@v2.0.0-beta.42
+replace github.com/wailsapp/wails/v2 v2.0.0-beta.44.2 => C:\Users\Benoit\go\pkg\mod\github.com\wailsapp\wails\v2@v2.0.0-beta.42

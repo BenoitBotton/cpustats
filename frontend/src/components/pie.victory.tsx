@@ -1,5 +1,5 @@
 import React from "react"
-import { VictoryAnimation, VictoryLabel, VictoryPie } from "victory"
+import { VictoryLabel, VictoryPie } from "victory"
 
 
 type pieData = {
