@@ -2,12 +2,12 @@ import React from "react"
 import { VictoryLabel, VictoryPie } from "victory"
 
 
-type pieData = {
+type PieData = {
     name: string
     value: number
 }[]
 
-const PieVictoryComponent = ({ pieData }: { pieData: pieData }) => {
+const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
 
 
     const COLORS = ['#F26D22', 'transparent']
