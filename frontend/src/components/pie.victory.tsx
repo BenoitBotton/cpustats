@@ -7,7 +7,7 @@ type PieData = {
     value: number
 }[]
 
-const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
+export const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
 
 
     const COLORS = ['#F26D22', 'transparent']
@@ -44,5 +44,3 @@ const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
     )
 
 }
-
-export default PieVictoryComponent
