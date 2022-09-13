@@ -17,8 +17,8 @@ class App extends Component {
 
         const { usage } = this.state
         const pieData: PieData[] = [
-            { name: "L2", value: usage },
-            { name: "L1", value: 100 - usage }
+            { name: "L1", value: 100 - usage },
+            { name: "L2", value: usage }
         ]
 
         return (

@@ -13,7 +13,7 @@ interface PieDataProps {
 interface States { }
 
 export class PieRechartComponent extends React.Component<PieDataProps, States> {
-  COLORS = ['#F26D22', 'transparent']
+  COLORS = ['transparent', '#F26D22']
 
   constructor(props: PieDataProps) {
     super(props)

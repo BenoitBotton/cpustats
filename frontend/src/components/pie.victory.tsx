@@ -9,9 +9,6 @@ type PieData = {
 
 export const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
 
-
-    const COLORS = ['#F26D22', 'transparent']
-
     return (
         <>
             <h2 >CPU Usage - Victory</h2>
@@ -30,14 +27,16 @@ export const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
                     startAngle={160}
                     endAngle={-160}
                     labels={() => null}
-                    colorScale={['#F26D22', 'transparent']}
+                    colorScale={['transparent', '#F26D22']}
                 />
                 <VictoryLabel
                     textAnchor="middle" verticalAnchor="middle"
                     x={200} y={200}
                     style={{ fontSize: 30, fill: '#999', fontFamily: 'candara' }}
 
-                    text={pieData[0].value + "%"}
+                    text={
+                        pieData.filter((pieData: { name: string }) => pieData.name == "L2").map((filterdData: { value: any }) => filterdData.value + "%")
+                    }
                 />
             </svg>
         </>
