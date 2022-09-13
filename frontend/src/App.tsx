@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         //  @ts-ignore
         window.runtime.EventsOn("cpu_usage", (cpu_usage: { avg: number }) => {
-            this.state = ({ usage: cpu_usage.avg })
+            this.setState({ usage: cpu_usage.avg })
         });
 
         const { usage } = this.state
