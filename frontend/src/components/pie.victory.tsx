@@ -37,7 +37,7 @@ export const PieVictoryComponent = ({ pieData }: { pieData: PieData }) => {
                     x={200} y={200}
                     style={{ fontSize: 30, fill: '#999', fontFamily: 'candara' }}
 
-                    text={pieData[0].value}
+                    text={pieData[0].value + "%"}
                 />
             </svg>
         </>

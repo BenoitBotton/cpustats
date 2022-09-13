@@ -20,22 +20,26 @@ export class PieRechartComponent extends React.Component<PieDataProps, States> {
   }
 
   render() {
+
+    let data = this.props.pieData
     return (
       <>
         <h2>CPU Usage - Recharts</h2>
         <ResponsiveContainer width={"100%"} height={300} min-width={300}>
           <PieChart width={400} height={400}>
-            {/* <text
+            <text
               x="50%"
               y="50%"
               textAnchor="middle"
               dominantBaseline="middle"
               style={{ fontSize: 30, fill: '#999', fontFamily: 'candara' }}
             >
-              {usage}
-            </text> */}
+              {
+                data.filter(data => data.name == "L2").map(filterdData => filterdData.value)
+              }%
+            </text>
             <Pie
-              data={this.props.pieData}
+              data={data}
               dataKey="value"
               innerRadius="80%"
               outerRadius="100%"
@@ -47,7 +51,7 @@ export class PieRechartComponent extends React.Component<PieDataProps, States> {
               cornerRadius={10}
             >
               {
-                this.props.pieData.map((_entry: any, index: number) => (
+                data.map((_entry: any, index: number) => (
                   <Cell key={`cell-${index}`} fill={this.COLORS[index]} />
                 ))
               }
